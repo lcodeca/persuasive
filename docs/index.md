@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+# “Persuasive” in a nutshell
 
-You can use the [editor on GitHub](https://github.com/lcodeca/persuasive/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Urban traffic congestion is a significant problem that has repercussions for economic growth and the wellness of urban populations. Large-scale social events (e.g., sports events, concerts, or demonstrations) represent an integral aspect of living in a city but are frequently a source of severe traffic disruption, with an impact on both the people participating in the event and the wider community. With urban road infrastructures fast reaching their capacity, the only viable strategy to alleviate congestion is to optimise the use of the available resources. We expect that coordination and cooperation between travellers can improve traffic flow by minimising travel delays, and the time required to find parking spaces. Motivated by the availability of fine-grained sensor data from individual vehicles and the opportunity to influence traveller behaviour in real time through appropriate feedback, the objective of this work is to implement dynamic multi-modal traffic congestion mitigation strategies for large-scale social events, improving travel and parking delays. We hypothesise that machine learning techniques can be used to identify traffic flow optimisation strategies that also leverage IoT infrastructures for participatory sensing and data dissemination. Through unsupervised learning, we expect to recognise underlying patterns in the mobility surrounding events that can be exploited to optimise the trip planning process. Our proposed solution comprises of planning strategies proposed to the travellers as guidance and instructions. Considering the constraints arising from large-scale social events, we aim to propose dynamic strategies for congestion mitigation based on participatory sensing and feedback-loop information that exploit multi-modal transportation options. In the scope of this research project, the only information that may be required is anonymised location. Throughout the design and implementation process, anonymisation strategies will be used to guarantee that no identifiable personal data will be collected or processed by the system.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+**_This project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement No. 713567. ENABLE is funded under Science Foundation Ireland (16/SP/3804) and is co-funded under the European Regional Development Fund._**
 
-### Markdown
+## Infographic
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![Image](imgs/2020-02-17Persuasive.jpg)
 
-```markdown
-Syntax highlighted code block
+## Associated Projects
 
-# Header 1
-## Header 2
-### Header 3
+- RLLIB SUMO Utils: https://github.com/lcodeca/rllibsumoutils
+- RLLIB SUMO Docker: https://github.com/lcodeca/rllibsumodocker
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lcodeca/persuasive/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
