@@ -6,10 +6,10 @@ Urban traffic congestion is a significant problem that has repercussions for eco
 
 ## Infographic
 
-![Image](imgs/2020-02-17Persuasive.jpg)
+![Persuasive Poster](imgs/2020-02-17Persuasive.jpg)
 
 ## Associated Projects
 
-- RLLIB SUMO Utils: https://github.com/lcodeca/rllibsumoutils
-- RLLIB SUMO Docker: https://github.com/lcodeca/rllibsumodocker
+- RLLIB SUMO Utils: [https://github.com/lcodeca/rllibsumoutils](https://github.com/lcodeca/rllibsumoutils)
+- RLLIB SUMO Docker: [https://github.com/lcodeca/rllibsumodocker](https://github.com/lcodeca/rllibsumodocker)
 
