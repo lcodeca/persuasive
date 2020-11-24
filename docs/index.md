@@ -47,11 +47,13 @@ The implementation of a realistic mobility model for a large city requires preci
 # Infrastructure 
 
 ## Ray – RLlib 
+
 [Ray](https://docs.ray.io/en/master/ray-overview/index.html) provides a simple, universal API for building distributed applications. 
 
 [RLlib](https://docs.ray.io/en/master/rllib.html) is an open-source library for reinforcement learning built on top of Ray. It offers both high scalability and a unified API for a variety of applications. RLlib natively supports TensorFlow, TensorFlow Eager, and PyTorch, but most of its internals are framework agnostic. 
 
 ### Algorithms 
+
 RLlib provides a suite of [algorithms](https://docs.ray.io/en/master/rllib-algorithms.html) already implemented that we are using to study the Persuasive learning problem. 
 In our preliminary work, we used [A3C](https://docs.ray.io/en/master/rllib-algorithms.html#a3c) with and without LSTM, [DQN](https://docs.ray.io/en/master/rllib-algorithms.html#dqn) and [PPO](https://docs.ray.io/en/master/rllib-algorithms.html#ppo). 
 
@@ -59,8 +61,12 @@ In our preliminary work, we used [A3C](https://docs.ray.io/en/master/rllib-algor
 "Simulation of Urban MObility" [(SUMO)](https://sumo.dlr.de/docs/index.html) is an open-source, highly portable, microscopic and continuous traffic simulation package designed to handle large networks. It allows for intermodal simulation including pedestrians and comes with a large set of tools for scenario creation. 
 
 ### Scenarios 
-<Random grid screenshot> <MoST Scenario screenshot> 
+
 During implementation and testing we are using an extension of the random grid scenario available through the [PyPML](https://github.com/lcodeca/PyPML/tree/master/examples/random_grid) library and for the final evaluation and validation, we are going to use the [MoST Scenario](https://github.com/lcodeca/MoSTScenario) a general-purpose realistic multi-modal mobility model of the Principality of Monaco. 
+
+Random Grid                          |  MoST Scenario
+:-----------------------------------:|:----------------------------------------------------:
+![Random Grid](imgs/RandomGrid.png)  |  ![MoST Scenario](imgs/MoSTScenario.png)
 
 ## RLlib SUMO Utils 
 In order to connect the SUMO simulator with the RLlib distributed environment, we implemented a [python library](https://github.com/lcodeca/rllibsumoutils) and a [Docker environment](https://github.com/lcodeca/rllibsumodocker) for testing.  
