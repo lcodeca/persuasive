@@ -64,9 +64,14 @@ In our preliminary work, we used [A3C](https://docs.ray.io/en/master/rllib-algor
 
 During implementation and testing we are using an extension of the random grid scenario available through the [PyPML](https://github.com/lcodeca/PyPML/tree/master/examples/random_grid) library and for the final evaluation and validation, we are going to use the [MoST Scenario](https://github.com/lcodeca/MoSTScenario) a general-purpose realistic multi-modal mobility model of the Principality of Monaco. 
 
-Random Grid                          |  MoST Scenario
-:-----------------------------------:|:----------------------------------------------------:
-![Random Grid](imgs/RandomGrid.png)  |  ![MoST Scenario](imgs/MoSTScenario.png)
+Random Grid                          |  
+:-----------------------------------:|
+![Random Grid](imgs/RandomGrid.png)  |  
+
+
+MoST Scenario                           |
+:---------------------------------------:
+![MoST Scenario](imgs/MoSTScenario.png) |
 
 ## RLlib SUMO Utils 
 In order to connect the SUMO simulator with the RLlib distributed environment, we implemented a [python library](https://github.com/lcodeca/rllibsumoutils) and a [Docker environment](https://github.com/lcodeca/rllibsumodocker) for testing.  
