@@ -44,6 +44,18 @@ The implementation of a realistic mobility model for a large city requires preci
 * Intermodal Mobility Modelling: The use of multiple modes of transport for a single journey increases the complexity of the planning problem exponentially.  
 * Sensor data integration: The collection and integration of sensor data into a simulation infrastructure (to enable MARL) is still in its early stages. 
 
+# Learning environment  
+The learning environment we implemented is based on [OpenAI Gym compatible MARL Environment](https://github.com/ray-project/ray/blob/master/rllib/env/multi_agent_env.py), and it provides the interaction between the learning and SUMO. 
+
+## Agents 
+Our agents represent the eventgoers. Their goal is to learn how to reach the event on time, using the optimal transportation mode in the context of other eventgoers' plans and the background (non-event-related) mobility demand. In practice, the travel plan needs to minimise the time spent waiting at the destination, without being late, and this is reflected in the reward. 
+
+## Actions  
+The actions available to agents include "wait" (i.e., delay the start of the journey) and actions designed to initiate a journey now depending on available modes of travel (e.g., "walk", "public transport", "bicycle", "car", "motorbike").  
+
+## States 
+The state space features include the origin and destination, the time to the event, and the estimated travel time for each mode of transport. Additionally, based on the idea that the agents are using an application on their smartphone to receive the trip plan, the future demand (agents that are still waiting) and the current transportation mode usage (based on the other agents' actions) is added to the features and used to model implicit cooperation among the agents.
+
 # Infrastructure 
 
 ## Ray – RLlib 
@@ -62,10 +74,7 @@ In our preliminary work, we used [A3C](https://docs.ray.io/en/master/rllib-algor
 
 ### Scenarios 
 
-During implementation and testing we are using an extension of the random grid scenario available through the [PyPML](https://github.com/lcodeca/PyPML/tree/master/examples/random_grid) library and for the final evaluation and validation, we are going to use the [MoST Scenario](https://github.com/lcodeca/MoSTScenario) a general-purpose realistic multi-modal mobility model of the Principality of Monaco. 
-
-### Random Grid
-![Random Grid](imgs/RandomGrid.png)
+During implementation and testing we are using an extension of the random grid scenario available through the [PyPML](https://github.com/lcodeca/PyPML/tree/master/examples/random_grid) library and for the final evaluation and validation, we are going to use the Codeca's [MoST Scenario](https://github.com/lcodeca/MoSTScenario), a general-purpose realistic multi-modal mobility model of the Principality of Monaco. 
 
 ### MoST Scenario
 ![MoST Scenario](imgs/MoSTScenario.png)
@@ -75,14 +84,4 @@ In order to connect the SUMO simulator with the RLlib distributed environment, w
 
 **Note: the library has been included in [RLlib master](https://github.com/ray-project/ray/pull/11710) and is going to be available in future official releases.**
 
-# Learning environment  
-The learning environment we implemented is based on [OpenAI Gym compatible MARL Environment](https://github.com/ray-project/ray/blob/master/rllib/env/multi_agent_env.py), and it provides the interaction between the learning and SUMO. 
-
-## Agents 
-Our agents represent the eventgoers. Their goal is to learn how to reach the event on time, using the optimal transportation mode in the context of other eventgoers' plans and the background (non-event-related) mobility demand. In practice, the travel plan needs to minimise the time spent waiting at the destination, without being late, and this is reflected in the reward. 
-
-## Actions  
-The agents available to agents include "wait" (i.e., delay the start of the journey) and actions designed to initiate a journey now depending on available models of travel (e.g., "walk", "public transport", "bicycle", "car", "motorbike").  
-
-## States 
-The state space features include the origin and destination, the time to the event, and the estimated travel time for each mode of transport. Additionally, based on the idea that the agents are using an application on their smartphone to receive the trip plan, the future demand (agents that are still waiting) and the current transportation mode usage (based on the other agents' actions) is added to the features and used to model implicit cooperation among the agents. 
+ 
